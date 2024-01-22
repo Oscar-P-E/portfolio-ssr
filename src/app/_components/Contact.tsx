@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useRef, useEffect, type ChangeEvent } from "react";
 import TextareaAutosize from "react-textarea-autosize";
 import emailjs from "@emailjs/browser";
@@ -137,7 +139,7 @@ export default function Contact() {
         </div>
       ) : (
         <form ref={formRef} onSubmit={handleSubmit} className="pt-28">
-          <div className="mx-auto max-w-5xl border-2 border-stone-200 bg-slate-900 px-12 pb-10 pt-12 font-mono text-5xl">
+          <div className="mx-auto max-w-5xl border-2 border-stone-200 border-opacity-50 bg-gradient-to-tr from-cyan-950 to-indigo-950 px-12 pb-10 pt-12 font-mono text-5xl">
             Hi my name is{" "}
             <input
               ref={nameRef}
@@ -196,7 +198,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="border border-stone-200 px-3 py-2 text-4xl uppercase tracking-wider hover:border-cyan-400 hover:bg-cyan-400 hover:text-neutral-900 disabled:cursor-default disabled:border-gray-500 disabled:bg-gray-500 disabled:text-gray-900 disabled:opacity-50"
+                className="border border-stone-200 px-3 py-2 text-4xl uppercase tracking-wider transition-all delay-0 duration-200 hover:border-green-400 hover:bg-green-400 hover:text-neutral-900 disabled:cursor-default disabled:border-gray-500 disabled:bg-gray-500 disabled:text-gray-900 disabled:opacity-50"
               >
                 Send Message
               </button>
@@ -208,7 +210,7 @@ export default function Contact() {
         ...or just email me at{" "}
         <a
           href="mailto:oscarssecretary@gmail.com"
-          className="underline decoration-dotted"
+          className="underline decoration-dotted hover:opacity-80"
         >
           oscarssecretary@gmail.com
         </a>

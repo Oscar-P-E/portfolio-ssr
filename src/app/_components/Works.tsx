@@ -1,3 +1,5 @@
+"use client";
+
 export default function Works() {
   return (
     <div className="pb-24 pt-4">
@@ -11,21 +13,21 @@ export default function Works() {
           <div className="col-span-2">
             <div className="pb-16 pr-8">
               <img
-                className="rounded-xl"
+                className="fade-in-from-left rounded-3xl"
                 src="/img/works/oe-multiple.jpg"
                 alt="optimize electrical responsive design multiple devices"
               />
             </div>
             <div className="pb-16 pr-8">
               <img
-                className="rounded-xl"
+                className="fade-in-from-left rounded-3xl"
                 src="/img/works/oe-phone.jpg"
                 alt="optimize electrical mobile phone"
               />
             </div>
           </div>
 
-          <div>
+          <div className="fade-in-from-left">
             <h2 className="font-mono text-4xl">
               <a href="http://optimizeelectrical.com.au">Optimize Electrical</a>
             </h2>
@@ -38,7 +40,7 @@ export default function Works() {
             <p className="font-mono text-2xl">
               {"> "}
               <a
-                className="underline decoration-dotted"
+                className="underline decoration-dotted hover:opacity-80"
                 href="http://optimizeelectrical.com.au"
               >
                 optimizeelectrical.com.au
@@ -47,7 +49,7 @@ export default function Works() {
           </div>
 
           {/* Project 2 */}
-          <div>
+          <div className="fade-in-from-left">
             <h2 className="font-mono text-4xl">
               <a href="http://glassninja.com.au">Glass Ninja</a>
             </h2>
@@ -62,7 +64,7 @@ export default function Works() {
             <p className="font-mono text-2xl">
               {"> "}
               <a
-                className="underline decoration-dotted "
+                className="underline decoration-dotted hover:opacity-80"
                 href="http://glassninja.com.au"
               >
                 glassninja.com.au
@@ -72,9 +74,9 @@ export default function Works() {
 
           <div className="col-span-2">
             <div className="pb-16 pr-8">
-              {/* <div className="pl-12 pr-11 pt-12 pb-11 bg-gradient-to-tr opacity-90 from-[rgb(240,243,254)] to-[rgb(210,210,225)] rounded-xl"> */}
+              {/* <div className="pl-12 pr-11 pt-12 pb-11 bg-gradient-to-tr opacity-90 from-[rgb(240,243,254)] to-[rgb(210,210,225)] rounded-3xl"> */}
               <img
-                className="rounded-xl"
+                className="fade-in-from-left rounded-3xl"
                 src="/img/works/gn-browser.jpg"
                 alt="optimize electrical responsive design multiple devices"
               />
@@ -82,14 +84,14 @@ export default function Works() {
             </div>
             <div className="pb-16 pr-8">
               <img
-                className="rounded-xl"
+                className="fade-in-from-left rounded-3xl"
                 src="/img/works/gn-phone.jpg"
                 alt="optimize electrical mobile phone"
               />
             </div>
             <div className="pb-16 pr-8">
               <img
-                className="rounded-xl"
+                className="fade-in-from-left rounded-3xl"
                 src="/img/works/gn-phone-contact.jpg"
                 alt="optimize electrical mobile phone"
               />

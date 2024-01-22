@@ -1,3 +1,5 @@
+"use client";
+
 export default function BackToTop() {
   return (
     <div className="fixed bottom-4 right-4 z-10">

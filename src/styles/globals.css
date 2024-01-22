@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    /* @apply bg-neutral-800; */
+    @apply bg-neutral-800; /* prevent white overscroll on touchpad/mobile/etc */
     @apply bg-gradient-to-b from-neutral-800 to-black;
   }
 }
@@ -64,4 +64,211 @@
   .bg-hero {
     background-image: url(/img/debugging-noise.jpg);
   }
+}
+
+/* Fade-in animation */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+/* Slide-in from left animation */
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-from-left {
+  animation: slideInFromLeft 1.2s ease-out;
+}
+
+/* Slide-in from right animation */
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-from-right {
+  animation: slideInFromRight 1.2s ease-out;
+}
+
+/* Fade-in and up animation */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp ease-out;
+  animation-timeline: view();
+  animation-range: entry();
+}
+
+/* Apply different delays to each list item */
+
+.fade-in-up:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.fade-in-up:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.fade-in-up:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.fade-in-up:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.fade-in-up:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.fade-in-up:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.fade-in-up:nth-child(7) {
+  animation-delay: 0.7s;
+}
+.fade-in-up:nth-child(8) {
+  animation-delay: 0.8s;
+}
+.fade-in-up:nth-child(9) {
+  animation-delay: 0.9s;
+}
+.fade-in-up:nth-child(10) {
+  animation-delay: 1s;
+}
+
+/* Fade-in and grow image from left */
+
+@keyframes fadeInFromLeft {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.fade-in-from-left {
+  animation: fadeInFromLeft ease-in forwards;
+  animation-timeline: view();
+  animation-range-start: entry;
+  animation-range-end: entry 75%;
+  /* animation-range: entry; */
+}
+
+/* Fade-in and grow image from right */
+
+@keyframes fadeInFromRight {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.fade-in-from-right {
+  animation: fadeInFromRight ease-in forwards;
+  animation-timeline: view();
+  animation-range-start: entry;
+  animation-range-end: entry 75%;
+  /* animation-range: entry; */
+}
+
+/* Fade-out as scroll away */
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(150px);
+  }
+}
+
+.fade-out {
+  animation: fadeOut linear;
+  animation-timeline: view();
+  animation-range: exit;
+}
+
+/* Hover grow icons and return back when mouse off */
+
+@keyframes grow {
+  from {
+    transform: scale(1);
+    transform-origin: 0%;
+  }
+  to {
+    transform: scale(1.1);
+    transform-origin: 10%;
+    /* color: #fbbf24; */
+    @apply text-amber-400;
+  }
+}
+
+.hover-grow:hover {
+  animation: grow 0.05s linear forwards;
+  @apply cursor-pointer;
+
+  /* avoid shifting position */
+  /* transform-origin: 0%; */
+}
+
+/* animate jiggle rotation */
+
+@keyframes jiggle {
+  0% {
+    transform: rotate();
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.jiggle:hover {
+  animation: jiggle 1s linear infinite;
 }
