@@ -1,6 +1,13 @@
+/* globals.css */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "ProggyVectorRegular";
+  src: url("/fonts/ProggyVector-Regular") format("woff");
+}
 
 @layer base {
   body {
