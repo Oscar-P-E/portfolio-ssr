@@ -15,8 +15,8 @@ export default function About() {
         <div className="fade-out border-b-2 border-t-2 border-stone-200 border-opacity-50 bg-gradient-to-tr from-cyan-950 to-indigo-950 p-12">
           <div className="flex justify-center">
             <div className="max-w-5xl">
-              <h2 className=" pb-8 font-mono text-6xl">Weapons of Choice:</h2>
-              <ul className="grid grid-cols-1 gap-x-[8vw] gap-y-4 font-mono text-2xl md:grid-cols-3 lg:grid-cols-3">
+              <h2 className=" pb-8  text-6xl">Weapons of Choice:</h2>
+              <ul className="grid grid-cols-1 gap-x-[8vw] gap-y-4  text-2xl md:grid-cols-3 lg:grid-cols-3">
                 <li className="hover-grow flex items-center justify-start gap-2">
                   <FaReact /> React
                 </li>

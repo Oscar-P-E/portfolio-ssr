@@ -9,7 +9,7 @@ import ScrollEffects from "./_components/ScrollEffects";
 export default function Home() {
   return (
     <>
-      <div className="relative text-stone-200 fade-in">
+      <div className="fade-in relative font-mono text-stone-200">
         {/* Scroll Effects for Background Image and Back to Top Button */}
         <ScrollEffects />
 

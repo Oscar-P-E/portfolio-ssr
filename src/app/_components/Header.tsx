@@ -13,11 +13,11 @@ export default function Header() {
         <Marquee
           gradient={false}
           speed={50}
-          className="mr-2 hidden cursor-default items-baseline whitespace-nowrap font-mono text-3xl uppercase sm:flex"
+          className="mr-2 hidden cursor-default items-baseline whitespace-nowrap  text-3xl uppercase sm:flex"
         >
           {marqueeText.repeat(1)}
         </Marquee>
-        <ul className="ml-auto flex justify-center gap-12 border border-stone-200 py-1 font-mono text-2xl uppercase sm:px-12">
+        <ul className="ml-auto flex justify-center gap-12 border border-stone-200 py-1  text-2xl uppercase sm:px-12">
           <li>
             <InteractiveNavLink targetId="works">Works</InteractiveNavLink>
           </li>

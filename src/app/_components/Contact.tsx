@@ -124,13 +124,13 @@ export default function Contact() {
 
   return (
     <div className="pt-20">
-      <h1 id="contact" className="pl-12 pt-4 font-mono text-6xl">
+      <h1 id="contact" className="pl-12 pt-4  text-6xl">
         Why not get in touch?
       </h1>
 
       {success ? (
         <div className="pt-28">
-          <div className="mx-auto max-w-5xl border-2 border-stone-200 bg-green-400 bg-opacity-50 px-12 pb-10 pt-12 font-mono text-4xl ">
+          <div className="mx-auto max-w-5xl border-2 border-stone-200 bg-green-400 bg-opacity-50 px-12 pb-10 pt-12  text-4xl ">
             <h2 className="pb-4 text-5xl">Message Sent!</h2>
             Thanks <span className="opacity-50">{name}</span>! I&apos;ll get
             back to you at <span className="opacity-50">{email}</span> as soon
@@ -139,7 +139,7 @@ export default function Contact() {
         </div>
       ) : (
         <form ref={formRef} onSubmit={handleSubmit} className="pt-28">
-          <div className="mx-auto max-w-5xl border-2 border-stone-200 border-opacity-50 bg-gradient-to-tr from-cyan-950 to-indigo-950 px-12 pb-10 pt-12 font-mono text-5xl">
+          <div className="mx-auto max-w-5xl border-2 border-stone-200 border-opacity-50 bg-gradient-to-tr from-cyan-950 to-indigo-950 px-12 pb-10 pt-12  text-5xl">
             Hi my name is{" "}
             <input
               ref={nameRef}
@@ -206,7 +206,7 @@ export default function Contact() {
           </div>
         </form>
       )}
-      <div className="ml-auto w-fit pr-12 pt-28 font-mono text-4xl">
+      <div className="ml-auto w-fit pr-12 pt-28  text-4xl">
         ...or just email me at{" "}
         <a
           href="mailto:oscarssecretary@gmail.com"

@@ -22,7 +22,7 @@ const InteractiveNavLink: React.FC<InteractiveNavLinkProps> = ({
   return (
     <a
       href={`#${targetId}`}
-      className="lowercase hover:uppercase hover:text-amber-400"
+      className="lowercase hover:uppercase"
       onClick={handleLinkClick}
     >
       {children}

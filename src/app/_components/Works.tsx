@@ -4,7 +4,7 @@ export default function Works() {
   return (
     <div className="pb-24 pt-4">
       <div className="pl-24 pr-2 pt-40">
-        <h1 id="works" className="sticky top-0 pt-8 font-mono text-6xl">
+        <h1 id="works" className="sticky top-0 pt-8  text-6xl">
           Portfolio<span className="blinking-cursor">_</span>
         </h1>
 
@@ -28,16 +28,16 @@ export default function Works() {
           </div>
 
           <div className="fade-in-from-left">
-            <h2 className="font-mono text-4xl">
+            <h2 className=" text-4xl">
               <a href="http://optimizeelectrical.com.au">Optimize Electrical</a>
             </h2>
-            <p className="py-2 font-mono text-2xl ">
+            <p className="py-2  text-2xl ">
               Not overly fancy, yet professional and modern. User-friendly
               design, intuitive interface. Easy to see who they are are, what
               they do, and how to{" "}
               <span className="whitespace-nowrap">contact them</span>.
             </p>
-            <p className="font-mono text-2xl">
+            <p className=" text-2xl">
               {"> "}
               <a
                 className="underline decoration-dotted hover:opacity-80"
@@ -50,10 +50,10 @@ export default function Works() {
 
           {/* Project 2 */}
           <div className="fade-in-from-left">
-            <h2 className="font-mono text-4xl">
+            <h2 className=" text-4xl">
               <a href="http://glassninja.com.au">Glass Ninja</a>
             </h2>
-            <p className="py-2 font-mono text-2xl ">
+            <p className="py-2  text-2xl ">
               A non-standard design almost entirely in pure black and white.
               Everything fits on a single page, resembling a window with panes
               that expand into full screen pages. Compact but still intuitive.
@@ -61,7 +61,7 @@ export default function Works() {
               window{" "}
               <span className="whitespace-nowrap">cleaning business.</span>
             </p>
-            <p className="font-mono text-2xl">
+            <p className=" text-2xl">
               {"> "}
               <a
                 className="underline decoration-dotted hover:opacity-80"
@@ -104,8 +104,8 @@ export default function Works() {
           </div>
 
           <div>
-            <h2 className="text-4xl font-mono">gAIns - AI Training App</h2>
-            <p className="text-2xl font-mono py-2 ">
+            <h2 className="text-4xl ">gAIns - AI Training App</h2>
+            <p className="text-2xl  py-2 ">
               Built out of frustration with existing workout apps. gAIns is all
               about smart, personalized training. It adapts your workout plan
               based on your progress and goals. No fluff – just a
@@ -113,7 +113,7 @@ export default function Works() {
               It's like having a personal trainer in your pocket, but{" "}
               <span className="whitespace-nowrap">powered by AI.</span>
             </p>
-            <p className="text-2xl font-mono">
+            <p className="text-2xl ">
               {"> "}
               <a
                 className="underline decoration-dotted"

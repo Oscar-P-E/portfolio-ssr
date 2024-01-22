@@ -4,13 +4,13 @@ export default function Hero() {
   return (
     <div className="fade-out h-hero-minus-header flex flex-col sm:flex-col-reverse">
       <div className="flex flex-col justify-end p-6 pr-0">
-        <h1 className="hero-heading font-mono uppercase leading-[80%] tracking-tight">
+        <h1 className="hero-heading  uppercase leading-[80%] tracking-tight">
           Front-End
           <br />
           Developer
         </h1>
       </div>
-      <div className=" mb-auto ml-auto max-w-4xl pr-12 pt-12 text-end font-mono text-4xl sm:text-5xl md:text-6xl">
+      <div className=" mb-auto ml-auto max-w-4xl pr-12 pt-12 text-end  text-4xl sm:text-5xl md:text-6xl">
         <p className="pb-2">
           My name is <span className="whitespace-nowrap">Oscar El.</span>
         </p>

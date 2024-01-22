@@ -5,8 +5,13 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "ProggyVectorRegular";
-  src: url("/fonts/ProggyVector-Regular") format("woff");
+  font-family: "ProggyClean";
+  /* src: url("/fonts/ProggyVector-Regular.woff") format("woff"); */
+  /* src: url("/fonts/ProggyClean.ttf") format("truetype"); */
+  src:
+    url("/fonts/proggyclean-webfont.woff2") format("woff2"),
+    url("/fonts/proggyclean-webfont.woff") format("woff");
+  font-display: swap;
 }
 
 @layer base {

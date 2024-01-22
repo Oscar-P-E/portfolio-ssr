@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        mono: ["ProggyVectorRegular", "ui-monospace", "monospace"],
+        mono: ["ProggyClean", "monospace"],
       },
       colors: {
         "neutral-850": "rgb(31, 31, 31)",
