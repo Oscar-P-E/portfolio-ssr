@@ -5,7 +5,7 @@ export default function BackToTop() {
     <div className="fixed bottom-4 right-4 z-10">
       <button
         onClick={() => {
-          window.scrollTo({ top: 0, behavior: "smooth" });
+          window && window.scrollTo({ top: 0, behavior: "smooth" });
         }}
         className="flex h-10 w-10 items-center justify-center rounded-full bg-stone-200 text-2xl text-neutral-900 hover:scale-110 hover:transform hover:bg-white hover:text-black"
       >

@@ -1,5 +1,3 @@
-"use client";
-
 export default function Works() {
   return (
     <div className="pb-24 pt-4">

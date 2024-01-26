@@ -71,7 +71,7 @@ export default function Contact() {
       const textLength = value.length;
       let newWidth = "100%";
 
-      if (window.innerWidth >= 640) {
+      if (typeof window !== "undefined" && window.innerWidth >= 640) {
         newWidth = textLength > 1 ? `${textLength}ch` : "12ch";
       }
       inputRef.current.style.width = newWidth;
@@ -115,9 +115,12 @@ export default function Contact() {
         break;
       case "message":
         setMessage(value);
-        setUseTextArea(
-          (window.innerWidth < 1024 && value.length > 12) || value.length > 45,
-        );
+        if (typeof window !== "undefined") {
+          setUseTextArea(
+            (window.innerWidth < 1024 && value.length > 12) ||
+              value.length > 45,
+          );
+        }
         if (!useTextArea) {
           adjustWidth(messageInputRef, value);
         }

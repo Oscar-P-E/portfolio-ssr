@@ -3,10 +3,10 @@
 import { useState, useEffect, useCallback } from "react";
 
 const HeroClientSideLogic = () => {
-  const [vhSize, setVhSize] = useState(window.innerHeight * 0.2);
-  const [vwSize, setVwSize] = useState(window.innerWidth * 0.15);
-  const [smallVhSize, setSmallVhSize] = useState(window.innerHeight * 0.2);
-  const [smallVwSize, setSmallVwSize] = useState(window.innerWidth * 0.2);
+  const [vhSize, setVhSize] = useState(0);
+  const [vwSize, setVwSize] = useState(0);
+  const [smallVhSize, setSmallVhSize] = useState(0);
+  const [smallVwSize, setSmallVwSize] = useState(0);
 
   const adjustFontSize = useCallback(() => {
     setVhSize(window.innerHeight * 0.2);
