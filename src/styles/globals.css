@@ -63,7 +63,8 @@
   left: 0;
   right: 0;
   /* bottom: 0; */
-  height: calc(100vh - 3.5rem);
+  /* height: calc(100vh - 3.5rem); */
+  background-attachment: fixed;
   transition: opacity 0.3s ease;
   z-index: -1;
 }
