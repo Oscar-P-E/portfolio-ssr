@@ -56,6 +56,7 @@
 .bg-hero {
   background-image: url(/img/debugging-noise.jpg);
   background-size: cover;
+  bacckground-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   position: sticky;
