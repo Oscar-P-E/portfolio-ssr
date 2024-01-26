@@ -69,7 +69,11 @@ export default function Contact() {
   ) => {
     if (inputRef.current) {
       const textLength = value.length;
-      const newWidth = textLength > 1 ? `${textLength}ch` : "12ch";
+      let newWidth = "100%";
+
+      if (window.innerWidth >= 640) {
+        newWidth = textLength > 1 ? `${textLength}ch` : "12ch";
+      }
       inputRef.current.style.width = newWidth;
     }
   };
@@ -111,7 +115,9 @@ export default function Contact() {
         break;
       case "message":
         setMessage(value);
-        setUseTextArea(value.length > 45);
+        setUseTextArea(
+          (window.innerWidth < 1024 && value.length > 12) || value.length > 45,
+        );
         if (!useTextArea) {
           adjustWidth(messageInputRef, value);
         }
@@ -123,23 +129,28 @@ export default function Contact() {
   };
 
   return (
-    <div className="pt-20">
-      <h1 id="contact" className="pl-12 pt-4  text-6xl">
+    <div className="px-8 pt-20 lg:px-0">
+      <h1
+        id="contact"
+        className="px-6 pb-14 pt-4 text-center text-5xl sm:px-12 sm:pb-28 sm:text-left sm:text-6xl"
+      >
         Why not get in touch?
       </h1>
 
       {success ? (
-        <div className="pt-28">
-          <div className="mx-auto max-w-5xl border-2 border-stone-200 bg-green-400 bg-opacity-50 px-12 pb-10 pt-12  text-4xl ">
-            <h2 className="pb-4 text-5xl">Message Sent!</h2>
+        <div>
+          <div className="mx-auto max-w-xl border-2 border-stone-200 bg-green-400 bg-opacity-50 px-12 pb-10 pt-12 text-3xl sm:max-w-5xl sm:text-4xl ">
+            <h2 className="pb-6 text-center text-4xl sm:pb-8 sm:text-5xl">
+              Message Sent!
+            </h2>
             Thanks <span className="opacity-50">{name}</span>! I&apos;ll get
             back to you at <span className="opacity-50">{email}</span> as soon
             as I can!
           </div>
         </div>
       ) : (
-        <form ref={formRef} onSubmit={handleSubmit} className="pt-28">
-          <div className="mx-auto max-w-5xl border-2 border-stone-200 border-opacity-50 bg-gradient-to-tr from-cyan-950 to-indigo-950 px-12 pb-10 pt-12  text-5xl">
+        <form ref={formRef} onSubmit={handleSubmit}>
+          <div className="mx-auto max-w-5xl border-2 border-stone-200 border-opacity-50 bg-gradient-to-tr from-cyan-950 to-indigo-950 px-12 pb-10 pt-12 text-3xl sm:text-5xl">
             Hi my name is{" "}
             <input
               ref={nameRef}
@@ -166,7 +177,7 @@ export default function Contact() {
               maxLength={30}
               required
             />
-            <span className="ml-1">.</span> Message:{" "}
+            <span className="ml-1 hidden lg:inline">.</span> Message:{" "}
             {useTextArea ? (
               <TextareaAutosize
                 ref={messageTextareaRef}
@@ -198,7 +209,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="border border-stone-200 px-3 py-2 text-4xl uppercase tracking-wider transition-all delay-0 duration-200 hover:border-green-400 hover:bg-green-400 hover:text-neutral-900 disabled:cursor-default disabled:border-gray-500 disabled:bg-gray-500 disabled:text-gray-900 disabled:opacity-50"
+                className="border border-stone-200 px-3 py-2 text-2xl uppercase tracking-wider transition-all delay-0 duration-200 hover:border-green-400 hover:bg-green-400 hover:text-neutral-900 disabled:cursor-default disabled:border-gray-500 disabled:bg-gray-500 disabled:text-gray-900 disabled:opacity-50 sm:text-4xl"
               >
                 Send Message
               </button>
@@ -206,7 +217,7 @@ export default function Contact() {
           </div>
         </form>
       )}
-      <div className="ml-auto w-fit pr-12 pt-28  text-4xl">
+      <div className="ml-auto w-fit pr-12 pt-28 text-2xl sm:text-4xl">
         ...or just email me at{" "}
         <a
           href="mailto:oscarssecretary@gmail.com"

@@ -54,6 +54,7 @@
 /* Background image complications */
 
 .bg-hero {
+  background-image: url(/img/debugging-noise.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -68,13 +69,7 @@
 
 @media (max-width: 639px) {
   .bg-hero {
-    background-image: none;
-  }
-}
-
-@media (min-width: 640px) {
-  .bg-hero {
-    background-image: url(/img/debugging-noise.jpg);
+    background-position: right -200px bottom 0px;
   }
 }
 
@@ -194,7 +189,7 @@
   animation: fadeInFromLeft ease-in forwards;
   animation-timeline: view();
   animation-range-start: entry;
-  animation-range-end: entry 75%;
+  animation-range-end: entry;
   /* animation-range: entry; */
 }
 
@@ -283,4 +278,14 @@
 
 .jiggle:hover {
   animation: jiggle 1s linear infinite;
+}
+
+.hidden-on-mobile {
+  @media (max-width: 639px) {
+    display: none;
+  }
+
+  @media (min-width: 640px) {
+    display: flex;
+  }
 }
