@@ -143,8 +143,8 @@ export default function Contact() {
 
       {success ? (
         <div>
-          <div className="mx-auto max-w-xl border-2 border-stone-200 bg-green-400 bg-opacity-50 px-12 pb-10 pt-12 text-3xl sm:max-w-5xl sm:text-4xl ">
-            <h2 className="pb-6 text-center text-4xl sm:pb-8 sm:text-5xl">
+          <div className="mx-auto max-w-xl border-2 border-stone-200 bg-green-400 bg-opacity-50 px-12 pb-10 pt-12 text-center text-3xl sm:max-w-5xl sm:text-4xl">
+            <h2 className="pb-4 text-center text-4xl sm:pb-6 sm:text-5xl">
               Message Sent!
             </h2>
             Thanks <span className="opacity-50">{name}</span>! I&apos;ll get
