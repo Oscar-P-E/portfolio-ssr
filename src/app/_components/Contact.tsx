@@ -5,6 +5,7 @@ import TextareaAutosize from "react-textarea-autosize";
 import emailjs from "@emailjs/browser";
 import confetti from "canvas-confetti";
 import { env } from "~/env";
+import { FaEnvelope } from "react-icons/fa";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -220,14 +221,11 @@ export default function Contact() {
           </div>
         </form>
       )}
-      <div className="ml-auto w-fit pr-12 pt-28 text-2xl sm:text-4xl">
-        ...or just email me at{" "}
-        <a
-          href="mailto:oscarssecretary@gmail.com"
-          className="underline decoration-dotted hover:opacity-80"
-        >
-          oscarssecretary@gmail.com
-        </a>
+      <div className="ml-auto flex w-fit gap-3 px-12 pt-20 text-2xl sm:gap-5 sm:align-bottom sm:text-4xl">
+        <FaEnvelope className="inline-block translate-y-1 rotate-2 text-cyan-950 transition-all  hover:rotate-0 hover:scale-110 hover:text-cyan-900 sm:-translate-y-1" />
+        <span className="opacity-80">
+          I personally respond to every message!
+        </span>
       </div>
     </div>
   );
