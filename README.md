@@ -1,3 +1,3 @@
 # The personal portfolio of Oscar El
 
-[oscarel.com]: https://oscarel.com
+[oscarel.com](https://oscarel.com)
