@@ -1,4 +1,16 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+
 export default function Works() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      void videoRef.current.play();
+    }
+  }, []);
+
   return (
     <div className="pb-24 pt-4">
       <div className="px-8 pt-12 md:px-24 md:pt-40">
@@ -6,70 +18,25 @@ export default function Works() {
           Portfolio<span className="blinking-cursor">_</span>
         </h1>
 
-        {/* Project 1 */}
-        <div className="flex flex-col-reverse gap-12 pt-52 lg:grid lg:grid-cols-3">
-          <div className="lg:col-span-2">
-            <div className="pb-12 md:pb-24">
-              <img
-                className="fade-in-from-left rounded-[2rem]"
-                src="/img/works/oe-multiple.jpg"
-                alt="optimize electrical responsive design multiple devices"
-              />
-            </div>
-            <div className="pb-12 md:pb-24">
-              <img
-                className="fade-in-from-left rounded-[2rem]"
-                src="/img/works/oe-phone.jpg"
-                alt="optimize electrical mobile phone"
-              />
-            </div>
-          </div>
-
-          <div className="fade-in-from-left h-fit">
-            <h2 className="text-4xl hover:opacity-80">
-              <a href="https://optimizeelectrical.com.au">
-                Optimize Electrical
-              </a>
-            </h2>
-            <p className="py-2 text-2xl">
-              Not overly fancy, yet professional and modern. User-friendly
-              design, intuitive interface. Easy to see who they are are, what
-              they do, and how to{" "}
-              <span className="whitespace-nowrap">contact them</span>.
-            </p>
-            <p className="text-2xl">
-              {"> "}
-              <a
-                className="underline decoration-dotted hover:opacity-80"
-                href="https://optimizeelectrical.com.au"
-              >
-                optimizeelectrical.com.au
-              </a>
-            </p>
-          </div>
-        </div>
-
         {/* Project 2 */}
         <div className="flex flex-col gap-12 pt-52 lg:grid lg:grid-cols-3">
           <div className="fade-in-from-left h-fit">
             <h2 className="text-4xl hover:opacity-80">
-              <a href="https://glassninja.com.au">Glass Ninja</a>
+              <a href="https://yournextwebdesign.com.au">
+                Your Next Web Design
+              </a>
             </h2>
             <p className="py-2 text-2xl">
-              A non-standard design almost entirely in pure black and white.
-              Everything fits on a single page, resembling a window with panes
-              that expand into full screen pages. Compact but still intuitive.
-              Calls to action are never buried. A &quot;clean&quot; design for a
-              window{" "}
-              <span className="whitespace-nowrap">cleaning business.</span>
+              This is the website for my own web design business. I wanted the
+              website to be colourful, modern, and professional, but not cold.
             </p>
             <p className="text-2xl">
               {"> "}
               <a
                 className="underline decoration-dotted hover:opacity-80"
-                href="https://glassninja.com.au"
+                href="https://yournextwebdesign.com.au"
               >
-                glassninja.com.au
+                yournextwebdesign.com.au
               </a>
             </p>
           </div>
@@ -77,31 +44,37 @@ export default function Works() {
           <div className="lg:col-span-2">
             <div className="pb-12 md:pb-24">
               {/* <div className="pl-12 pr-11 pt-12 pb-11 bg-gradient-to-tr opacity-90 from-[rgb(240,243,254)] to-[rgb(210,210,225)] rounded-[2rem]"> */}
-              <img
+              <video
                 className="fade-in-from-left rounded-[2rem]"
-                src="/img/works/gn-browser-3.jpg"
-                alt="optimize electrical responsive design multiple devices"
-              />
+                // alt="Your Next Web Design hero video"
+                autoPlay
+                ref={videoRef}
+                loop
+                muted
+                playsInline
+              >
+                <source src="/vid/ynwd-hero.mp4" type="video/mp4" />
+              </video>
               {/* </div> */}
             </div>
             <div className="pb-12 md:pb-24">
               <img
-                className="fade-in-from-left rounded-[2rem]"
-                src="/img/works/gn-phone-2.jpg"
-                alt="optimize electrical mobile phone"
+                className="fade-in-from-left rounded-[2rem] aspect-[3/2] object-cover"
+                src="/img/works/ynwd-rgb-3.jpg"
+                alt="your next web design our services three columns"
               />
             </div>
             <div className="pb-12 md:pb-24">
               <img
                 className="fade-in-from-left rounded-[2rem]"
-                src="/img/works/gn-phone-contact-2.jpg"
-                alt="optimize electrical mobile phone"
+                src="/img/works/ynwd-phone.jpg"
+                alt="your next web design responsive design phone iphone navigation menu"
               />
             </div>
           </div>
         </div>
 
-        {/* Project 3 */}
+        {/* Project 1 */}
         <div className="flex flex-col-reverse gap-12 pt-52 lg:grid lg:grid-cols-3">
           <div className="lg:col-span-2">
             <div className="pb-12 md:pb-24">
@@ -152,6 +125,101 @@ export default function Works() {
                 nlbc-website.vercel.app
               </a>
             </p>
+          </div>
+        </div>
+
+        {/* Project 3 */}
+        <div className="flex flex-col-reverse gap-12 pt-52 lg:grid lg:grid-cols-3">
+          <div className="lg:col-span-2">
+            <div className="pb-12 md:pb-24">
+              <img
+                className="fade-in-from-left rounded-[2rem]"
+                src="/img/works/oe-multiple.jpg"
+                alt="optimize electrical responsive design multiple devices"
+              />
+            </div>
+            <div className="pb-12 md:pb-24">
+              <img
+                className="fade-in-from-left rounded-[2rem]"
+                src="/img/works/oe-phone.jpg"
+                alt="optimize electrical mobile phone"
+              />
+            </div>
+          </div>
+
+          <div className="fade-in-from-left h-fit">
+            <h2 className="text-4xl hover:opacity-80">
+              <a href="https://optimizeelectrical.com.au">
+                Optimize Electrical
+              </a>
+            </h2>
+            <p className="py-2 text-2xl">
+              Not overly fancy, yet professional and modern. User-friendly
+              design, intuitive interface. Easy to see who they are are, what
+              they do, and how to{" "}
+              <span className="whitespace-nowrap">contact them</span>.
+            </p>
+            <p className="text-2xl">
+              {"> "}
+              <a
+                className="underline decoration-dotted hover:opacity-80"
+                href="https://optimizeelectrical.com.au"
+              >
+                optimizeelectrical.com.au
+              </a>
+            </p>
+          </div>
+        </div>
+
+        {/* Project 4 */}
+        <div className="flex flex-col gap-12 pt-52 lg:grid lg:grid-cols-3">
+          <div className="fade-in-from-left h-fit">
+            <h2 className="text-4xl hover:opacity-80">
+              <a href="https://glassninja.com.au">Glass Ninja</a>
+            </h2>
+            <p className="py-2 text-2xl">
+              A non-standard design almost entirely in pure black and white.
+              Everything fits on a single page, resembling a window with panes
+              that expand into full screen pages. Compact but still intuitive.
+              Calls to action are never buried. A &quot;clean&quot; design for a
+              window{" "}
+              <span className="whitespace-nowrap">cleaning business.</span>
+            </p>
+            <p className="text-2xl">
+              {"> "}
+              <a
+                className="underline decoration-dotted hover:opacity-80"
+                href="https://glassninja.com.au"
+              >
+                glassninja.com.au
+              </a>
+            </p>
+          </div>
+
+          <div className="lg:col-span-2">
+            <div className="pb-12 md:pb-24">
+              {/* <div className="pl-12 pr-11 pt-12 pb-11 bg-gradient-to-tr opacity-90 from-[rgb(240,243,254)] to-[rgb(210,210,225)] rounded-[2rem]"> */}
+              <img
+                className="fade-in-from-left rounded-[2rem]"
+                src="/img/works/gn-browser-3.jpg"
+                alt="optimize electrical responsive design multiple devices"
+              />
+              {/* </div> */}
+            </div>
+            <div className="pb-12 md:pb-24">
+              <img
+                className="fade-in-from-left rounded-[2rem]"
+                src="/img/works/gn-phone-2.jpg"
+                alt="optimize electrical mobile phone"
+              />
+            </div>
+            <div className="pb-12 md:pb-24">
+              <img
+                className="fade-in-from-left rounded-[2rem]"
+                src="/img/works/gn-phone-contact-2.jpg"
+                alt="optimize electrical mobile phone"
+              />
+            </div>
           </div>
         </div>
       </div>
